@@ -7,7 +7,7 @@ fsMgr is developed to introduce and demonstrate the concepts of
 - 'Abstraction in Search' for mid-scaled real time website
 - SVC (Search View Controller) design based on MVC pattern
 
-More about 'Abstraction in Search' can be read @ http://technobeans.wordpress.com/2012/10/03/abstraction-in-search/
+More about 'Abstraction in Search' and 'SVC design' can be read @ http://technobeans.wordpress.com/2012/10/03/abstraction-in-search/
 
 fsMgr was developed on Linux ubuntu 2.6.32-38-generic #83-Ubuntu and Python 2.6
 
@@ -16,20 +16,27 @@ Features
 Search facilities exported:
 
 - Highlighted
---	Highlights the searched keywords
+
+	Highlights the searched keywords
 
 - Did you mean
---	Spell check for searched keywords
+
+	Spell check for searched keywords
  
 - More like this
---	Document based search
 
-Usage
+	Document based search
+
+Setup
 =====
-Assuming your home directory points to /home/ubuntu
 
 - Create a directory fsMgr under /home/ubuntu
 - Copy the project contents under fsMgr
+
+Note: The project assumes your home directory points to /home/ubuntu. Make changes as appropriate to your ENV.
+
+Usage
+=====
 - Browse to /home/ubuntu/fsMgr at the terminal
 - Run fsMgr as 'python fsMgr.py'
 

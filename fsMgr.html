@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Home - fsMgr</title>
+		<link href="/home/ubuntu/fsMgr/images/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+	</head>
+
+	<body>
+		<div id="mybox">
+			<img src="/home/ubuntu/fsMgr/images/box.jpeg" height="70" width="70" />
+			<b>fsMgr</b>
+		</div>
+
+		<div id="search">
+			<FORM ACTION="/search" METHOD="POST">
+	        	<input type="text" name="q" onFocus="if (value == 'Search here..') {value=''}" onBlur="if (value== '') {value='Search here..'}" size="15">
+			<input type="submit" value="Search"/>
+			</FORM>
+	        </div>    
+
+		<div id="filesystem">
+		<center>
+			<table> 
+				<col width="250" /> <col width="100" /> <col width="200" /> <col width="200" />
+				<tr bgcolor="LightBlue">
+					<td height="30"> Name</td>
+					<td height="30">Type</td>
+					<td height="30">Size</td>
+					<td height="30">Last Modified</td>
+				</tr>
+				{% for value in dict.values() %}
+				<tr>
+                			<td height="50"><a href="{{ value[4] }}"> {{ value[0] }} </a></td>
+                			<td height="50"><img src="/home/ubuntu/fsMgr/images/{{ value[1] }}" height="40" width="40" /></td>
+                			<td height="50">{{ value[2] }}</td>
+					<td height="50">{{ value[3] }}</td>
+        			</tr>
+				{% end %}
+			</table>
+		</center>
+		</div>
+
+	    	<div id="sidebar">
+			<table align="left">
+			<col width="50" /> <col width="100" /> 
+			<tr>
+				<td> <img src="/home/ubuntu/fsMgr/images/start.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/start">Get Started</a> </td>
+			</tr>
+			<tr>
+				<td> <img src="/home/ubuntu/fsMgr/images/metadata.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/meta">Metadata</a> </td>
+			</tr>
+			<tr>
+				<td> <img src="/home/ubuntu/fsMgr/images/invite.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/invite">Invite</a> </td>
+			</tr>
+			<tr>	
+				<td> <img src="/home/ubuntu/fsMgr/images/developer.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/developer">Developer</a> </td>
+			</tr>
+			</table>
+		</div>
+
+	</body>
+</html>

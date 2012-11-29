@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>fsMgr - Search</title>
+		<link href="/home/ubuntu/fsMgr/images/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+	</head>
+
+	<body>
+		<div id="mybox">
+			<img src="/home/ubuntu/fsMgr/images/box.jpeg" height="70" width="70" />
+			<b>fsMgr</b>
+		</div>
+
+		<div id="filesystem">
+		<center>
+			<table border="1"> 
+				<h3> Search Results </h3>
+				<col width="200"> <col width="300">
+				<tr>
+					<td height="30">Searching..</td>
+					<td height="30">{{ q }}</td>
+				</tr>
+                                <tr>
+                                        <td height="30">Search Time</td>
+                                        <td height="30">{{ runtime  }}</td>
+                                </tr>
+
+                                <tr>
+                                        <td height="30">Docs Matched</td>
+                                        <td height="30">{{ occurences }}</td>
+                                </tr>
+                                <tr>
+                                        <td height="30">Showing Top 10 Documents</td>
+                                        <td height="30">
+                                        {% for u in url %}
+                                                <a href= {{ u }}> {{ u.rsplit('/',1)[1] }}<br /></a>
+                                        {% end %}
+                                        </td>
+                                </tr>
+
+			</table>
+		<a href="http://localhost:8888/advsearch"><h3>Advanced Search</h3></a>
+		</center>
+		</div>
+
+	    	<div id="sidebar">
+			<table align="left">
+			<col width="50" /> <col width="100" /> 
+			<tr>
+				<td> <img src="/home/ubuntu/fsMgr/images/start.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/start">Get Started</a> </td>
+			</tr>
+			<tr>
+				<td> <img src="/home/ubuntu/fsMgr/images/metadata.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/meta">Metadata</a> </td>
+			</tr>
+			<tr>
+				<td> <img src="/home/ubuntu/fsMgr/images/invite.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/invite">Invite</a> </td>
+			</tr>
+			<tr>	
+				<td> <img src="/home/ubuntu/fsMgr/images/developer.jpeg" height="30" width="30" /> </td>
+				<td> <a href="http://localhost:8888/developer">Developer</a> </td>
+			</tr>
+			</table>
+		</div>
+
+	</body>
+</html>

@@ -1,15 +1,15 @@
 fsMgr
 =====
 
-FileSystem Search Manager (fsMgr) is implemented with Tornado and Whoosh.
+FileSystem Search Manager (fsMgr)
 
-fsMgr is developed to introduce and demonstrate the concepts of 
+fsMgr is prototype developed to introduce and demonstrate the concepts of: 
 - 'Abstraction in Search' for mid-scaled real time website
 - SVC (Search View Controller) design based on MVC pattern
 
 More about 'Abstraction in Search' and 'SVC design' can be read @ http://technobeans.wordpress.com/2012/10/03/abstraction-in-search/
 
-fsMgr was developed on Linux ubuntu 2.6.32-38-generic #83-Ubuntu and Python 2.6
+fsMgr is implemented with Tornado & Whoosh Python libraries on Linux ubuntu 2.6.32-38-generic
 
 Features
 ========
@@ -37,8 +37,9 @@ Note: The project assumes your home directory points to /home/ubuntu. Make chang
 
 Usage
 =====
-- Browse to /home/ubuntu/fsMgr at the terminal
+- Login to /home/ubuntu/fsMgr at the terminal
 - Run fsMgr as 'python fsMgr.py'
+- Browse to http://localhost:8888/root/ & start searching
 
 Note: in fsMgr.py, the indexer (srch.indexer) is commented.
 Indexing happens on the tree under root/ when you search for a keyword. Time taken for indexing depends on size of root/
@@ -53,8 +54,16 @@ Dependencies
 
 Opportunities
 =============
+
 By adding a class in search.py, you could leverage more search engines under fsMgr.
-Abstraction to the new search engine can be implemented in fsMgr.py.
+Abstraction to the new search engine can be implemented in fsMgr.py. 
+For instance, pyLucene can be implemenetd in search.py and exposed to fsMgr.py.
+
+
+Known Issues
+============
+File contents cant be viewed if the file name contains white-spaces
+Robust error handling is not taken care of as its a prototype implementation
 
 Contact
 =======

@@ -40,6 +40,11 @@ Usage
 - Browse to /home/ubuntu/fsMgr at the terminal
 - Run fsMgr as 'python fsMgr.py'
 
+Note: in fsMgr.py, the indexer (srch.indexer) is commented.
+Indexing happens on the tree under root/ when you search for a keyword. Time taken for indexing depends on size of root/
+Hence, one needs to uncomment the indexer for preparing the index.
+Once index is ready under index/, uncomment it and start searching at super sonic speed! :)
+
 Dependencies
 ============
 - Python 2.6
@@ -49,7 +54,6 @@ Dependencies
 Opportunities
 =============
 By adding a class in search.py, you could leverage more search engines under fsMgr.
-
 Abstraction to the new search engine can be implemented in fsMgr.py.
 
 Contact

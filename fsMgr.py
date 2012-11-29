@@ -19,8 +19,6 @@ define("root_url",default=r"/root/(.*)")
 define("__ROOT__", default=r"root/")
 define("index", default=r"./index")
 
-#results = None
-
 class Search(tornado.web.RequestHandler):
 
     def initialize(self):
@@ -32,7 +30,6 @@ class Search(tornado.web.RequestHandler):
 	print self.q
 	srch = Searched(options.index,options.__ROOT__,self.q)
 	#srch.indexer()
-	#global results
 	results = srch.searcher()
 	runtime = results.runtime
 	occurences = len(results)

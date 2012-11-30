@@ -69,6 +69,7 @@ Contact
 =======
 
 Chetan Giridhar , cjgiridhar@gmail.com
+Vishal Kanaujia , vishalkanaujia@gmail.com
 
 License
 =======

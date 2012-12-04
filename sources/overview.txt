@@ -1,0 +1,27 @@
+.. fsMgr documentation master file, created by
+   sphinx-quickstart on Thu Nov 29 01:27:11 2012.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+fsMgr v1.0 documentation
+=========================
+
+Welcome! This is the documentation for fsMgr 1.0, last updated 30 Nov 2012
+
+
+Table of Contents
+==================
+
+.. toctree::
+   :maxdepth: 2
+
+   fsMgr
+   searching
+   meta
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

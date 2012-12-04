@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>searching &mdash; fsMgr 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="fsMgr 1.0 documentation" href="index.html" />
+    <link rel="next" title="meta" href="meta.html" />
+    <link rel="prev" title="fsMgr" href="fsMgr.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="meta.html" title="meta"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fsMgr.html" title="fsMgr"
+             accesskey="P">previous</a> |</li>
+        <li><a href="overview.html">fsMgr 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="searching">
+<h1>searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<span class="target" id="module-searching"></span><p>This module acts as underlaying search engine for the fsMgr 
+&amp; provides searching capabilities to users</p>
+<dl class="class">
+<dt id="searching.SearchEngine">
+<em class="property">class </em><tt class="descclassname">searching.</tt><tt class="descname">SearchEngine</tt><big>(</big><em>index_path</em><big>)</big><a class="reference internal" href="modules/searching.html#SearchEngine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#searching.SearchEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides simple API wrapper over Whoosh search engine.</p>
+<p><tt class="xref py py-func docutils literal"><span class="pre">__init__()</span></tt> - creates a directory where index is stored.</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>::</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">index_path, path of index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">create_index()</span></tt> - creates an index with defined schema</p>
+<ul>
+<li><p class="first"><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-python"><pre>:return: None</pre>
+</div>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">open_index()</span></tt> - opens up the index directory for reading the index</p>
+<ul>
+<li><p class="first"><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-python"><pre>:return: returns the pointer to the index</pre>
+</div>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">add_document()</span></tt> - adds a document to the index</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>::</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">paramter:</th><td class="field-body">url, url representing the file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">title, title of the document being added</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">content, content of the document</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">modtime, last modified time stamp</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">datetime</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">update_document()</span></tt> - update document to the index</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>::</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">paramter:</th><td class="field-body">url, url representing the file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">title, title of the document being added</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">content, content of the document</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">modtime, last modified time stamp</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">datetime</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">delete_document()</span></tt> - delete document from the index based on url</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>::</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">paramter:</th><td class="field-body">url, url representing the file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">types:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">find()</span></tt> - queries the index based on search query</p>
+<ul>
+<li><p class="first"><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-python"><pre>:return: none</pre>
+</div>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">commit()</span></tt> - commit the document to the index</p>
+<ul>
+<li><p class="first"><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-python"><pre>:return: none</pre>
+</div>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">cancel()</span></tt> - cancels the commit of added documents to index</p>
+<ul>
+<li><p class="first"><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-python"><pre>:return: none</pre>
+</div>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="class">
+<dt id="searching.Searched">
+<em class="property">class </em><tt class="descclassname">searching.</tt><tt class="descname">Searched</tt><big>(</big><em>indexpath</em>, <em>dirpath</em>, <em>q=None</em><big>)</big><a class="reference internal" href="modules/searching.html#Searched"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#searching.Searched" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>This class provides abstraction over Whoosh Search Engine.</dt>
+<dd><dl class="first last docutils">
+<dt>It provides clear APIs for </dt>
+<dd><ol class="first last arabic simple">
+<li>Indexing</li>
+<li>Searching</li>
+<li>Adv search - morelikethis</li>
+<li>Adv search - didyoumean</li>
+</ol>
+</dd>
+</dl>
+</dd>
+<dt><tt class="xref py py-func docutils literal"><span class="pre">__init__()</span></tt> - accepts the path where index is stored and </dt>
+<dd>the path from where the documents need to be indexed.</dd>
+</dl>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>::</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">indexpath, path of index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">dirpath, path of the root of filesystem</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">indexer()</span></tt> - reads the documents from root of file system, indexes them and commits the content.</p>
+<ul>
+<li><p class="first"><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-python"><pre>:return: None</pre>
+</div>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">searcher()</span></tt> - returns the top 10 results of search query.</p>
+<ul>
+<li><p class="first"><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-python"><pre>:return: top 10 results</pre>
+</div>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">morelikethis()</span></tt> - returns morelikethis results for a document.</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>::</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">document for morelikethis search</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">morelikethis search results</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+<p><tt class="xref py py-func docutils literal"><span class="pre">didyoumean()</span></tt> - returns didyoumean results for a search query.</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>::</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">parameter:</th><td class="field-body">results for didyoumean search</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type:</th><td class="field-body">string</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">didyoumean search results</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fsMgr.html"
+                        title="previous chapter">fsMgr</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="meta.html"
+                        title="next chapter">meta</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/searching.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="meta.html" title="meta"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fsMgr.html" title="fsMgr"
+             >previous</a> |</li>
+        <li><a href="overview.html">fsMgr 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Chetan Giridhar.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+meta
+=================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+.. automodule:: meta
+
+.. autoclass:: MetaData
+    :members:
+

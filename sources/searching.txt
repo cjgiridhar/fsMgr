@@ -1,0 +1,12 @@
+searching
+=========
+.. toctree::
+   :maxdepth: 2
+
+.. automodule:: searching
+
+.. autoclass:: SearchEngine
+    :members:
+
+.. autoclass:: Searched
+    :members:

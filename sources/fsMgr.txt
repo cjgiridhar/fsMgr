@@ -1,0 +1,25 @@
+fsMgr
+=====
+.. toctree::
+   :maxdepth: 2
+
+.. automodule:: fsMgr
+
+.. autoclass:: Search
+    :members:
+
+.. autoclass:: AdvSearch
+    :members:
+
+.. autoclass:: Highlighted
+    :members:
+
+.. autoclass:: MoreLikeThis
+    :members:
+
+.. autoclass:: DidYouMean
+    :members:
+
+.. autoclass:: FS
+    :members:
+

@@ -58,9 +58,9 @@ Dependencies
 Opportunities
 =============
 
-By adding a class in search.py, you could leverage more search engines under fsMgr.
+By adding a class in searching.py, you could leverage more search engines under fsMgr.
 Abstraction to the new search engine can be implemented in fsMgr.py. 
-For instance, pyLucene can be implemenetd in search.py and exposed to fsMgr.py.
+For instance, pyLucene can be implemenetd in searching.py and exposed to fsMgr.py.
 
 
 Known Issues
@@ -72,10 +72,9 @@ Contact
 =======
 
 Chetan Giridhar , cjgiridhar@gmail.com
-Vishal Kanaujia , vishalkanaujia@gmail.com
 
 License
 =======
 GNU General Public License v3.0
 
-Copyright (c) Chetan Giridhar, http://technobeans.com
+Copyright (c) Chetan Giridhar, [technobeans](http://technobeans.com)

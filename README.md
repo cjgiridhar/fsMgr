@@ -5,7 +5,7 @@ fsMgr is prototype developed to introduce and demonstrate the concepts of:
 - 'Abstraction in Search' for mid-scaled real time website
 - SVC (Search View Controller) design based on MVC pattern
 
-More about 'Abstraction in Search' and 'SVC design' here (http://technobeans.wordpress.com/2012/10/03/abstraction-in-search/)
+More about 'Abstraction in Search' and 'SVC design' [here](http://technobeans.wordpress.com/2012/10/03/abstraction-in-search/)
 
 fsMgr is implemented with Tornado & Whoosh Python libraries on Linux ubuntu 2.6.32-38-generic
 

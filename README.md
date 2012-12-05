@@ -25,6 +25,11 @@ Search facilities exported:
 
 	Document based search
 
+Documentation
+=============
+fsMgr is implemented with fsMgr.py, searching.py and meta.py modules
+Refer the documentation of these classes [here](http://cjgiridhar.github.com/fsMgr/overview.html)
+
 Setup
 =====
 

@@ -3,7 +3,7 @@ import unittest
 
 class fsMgr(unittest.TestCase):
 	"""
-	Test of indexing capabilities of fsMgr searching class
+	Test of indexing, simple and advanced searching capabilities of fsMgr searching class
 		root - tree structure that needs to be index
 		index - where the index should get created
 		q - search keyword

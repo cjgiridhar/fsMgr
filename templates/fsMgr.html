@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Home - fsMgr</title>
+		<title>fsMgr</title>
 		<link href="/home/ubuntu/fsMgr/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 	</head>
 
@@ -11,7 +11,7 @@
 			<img src="/home/ubuntu/fsMgr/images/box.jpeg" height="70" width="70" />
 			<b>fsMgr </b>
 		</div>
-
+		{% block header %}
 		<div id="search">
 			<FORM ACTION="/search" METHOD="POST">
 	        	<input type="text" name="q" onFocus="if (value == 'Search here..') {value=''}" onBlur="if (value== '') {value='Search here..'}" size="15">
@@ -40,7 +40,7 @@
 			</table>
 		</center>
 		</div>
-
+		{% end %}
 	    	<div id="sidebar">
 			<table align="left">
 			<col width="50" /> <col width="100" /> 

@@ -88,9 +88,19 @@ class Searched(object):
        	engine.open_index()
 	searcher, _queryparser = engine.find()
 	results = searcher.search(query.Term('content', self.q), limit=10)
-	docnum = searcher.document_number(url='http://localhost:8888/root/style.css')
+	#docnum = searcher.document_number(url='http://localhost:8888/root/style.css')
 	return results
 
+    def highlighted(self):
+        engine = SearchEngine(self.indexpath)
+        engine.open_index()
+        searcher, _queryparser = engine.find()
+        results = searcher.search(query.Term('content', self.q), limit=10)
+        url = []; content = []
+        for hit in results:
+                url.append(hit["url"])
+                content.append(hit.highlights("content"))
+	return (url, content)
 
     def morelikethis(self, path):
 	engine = SearchEngine(self.indexpath)
@@ -99,7 +109,10 @@ class Searched(object):
 	url = "http://localhost:8888/" + path
 	docnum = searcher.document_number(url=url)
 	r = searcher.more_like(docnum, 'content')
-	return r
+	like_url = []
+        for hit in r:
+                like_url.append(hit["url"])
+	return like_url
 
     def didyoumean(self, qstring):
         engine = SearchEngine(self.indexpath)
@@ -107,4 +120,7 @@ class Searched(object):
         searcher, _queryparser = engine.find()
 	corrector = searcher.corrector("content")
 	r = corrector.suggest(qstring, limit=3)
-	return r
+        hits = []
+        for h in r:
+                hits.append(h)
+	return hits

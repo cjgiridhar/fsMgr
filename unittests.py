@@ -11,6 +11,7 @@ class fsMgr(unittest.TestCase):
 	def setUp(self):
 		self.index = "/home/ubuntu/index"
 		self.root = "/home/ubuntu/fsMgr/root/"
+		self.docpath = "/home/ubuntu/fsMgr/root/hello.html"
 		self.srch = None
 
         def test_indexing(self):
@@ -27,6 +28,15 @@ class fsMgr(unittest.TestCase):
 		self.srch.indexer()
 		r=self.srch.didyoumean('piethon')
 		self.assertTrue('python' in r)
+
+	def test_morelikethis(self):
+	        self.srch = Searched(self.index, self.root)
+        	like_url = self.srch.morelikethis(self.docpath)
+
+
+	def test_highlighted(self):
+	        self.srch = Searched(self.index, self.root, 'python')
+        	url, content = self.srch.highlighted()
 
 	def tearDown(self):
 		self.index = None

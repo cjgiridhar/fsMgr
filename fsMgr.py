@@ -12,9 +12,9 @@ import datetime
 
 fsMgr = "/home/ubuntu/fsMgr/"
 define("port", default="8888")
-define("image_url", default=fsMgr + r"/images/(.*)")
+define("image_url", default=r"/home/ubuntu/fsMgr/images/(.*)")
 define("image_path", default=fsMgr + r"/images/")
-define("css_url", default=fsMgr + r"/css/(style.\css)")
+define("css_url", default=r"/home/ubuntu/fsMgr/css/(style.\css)")
 define("css_path", default=fsMgr + r"/css")
 define("root_url",default=r"/root/(.*)")
 define("__ROOT__", default=r"root/")

@@ -13,7 +13,7 @@
 		</div>
 		{% block header %}
 		<div id="search">
-			<FORM ACTION="/search" METHOD="POST">
+			<FORM ACTION="/search" METHOD="GET">
 	        	<input type="text" name="q" onFocus="if (value == 'Search here..') {value=''}" onBlur="if (value== '') {value='Search here..'}" size="15">
 			<input type="submit" value="Search"/>
 			</FORM>

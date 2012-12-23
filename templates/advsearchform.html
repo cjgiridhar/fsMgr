@@ -5,19 +5,19 @@
 		<div id="filesystem">
 		<center> 
 			<h3> More Like This!</h3>
-			<FORM action="/advsearch/morelikethis", METHOD="POST">
+			<FORM action="/advsearch/morelikethis", METHOD="GET">
 			<input type="text" name="docpath" onFocus="if (value == 'Document path..') {value=''}" onBlur="if (value== '') {value='Document path..'}">
 			<input type="submit" value="submit">
 			</FORM>
 			<br /> <br />
                         <h3> Did You Mean?</h3>
-                        <FORM action="/advsearch/didyoumean", METHOD="POST">
+                        <FORM action="/advsearch/didyoumean", METHOD="GET">
                         <input type="text" name="qstring" onFocus="if (value == 'Word here..') {value=''}" onBlur="if (value== '') {value='Word here..'}">
                         <input type="submit" value="submit">
                         </FORM>
                         <br /> <br />
                         <h3> Highlighted..</h3>
-                        <FORM action="/advsearch/highlighted", METHOD="POST">
+                        <FORM action="/advsearch/highlighted", METHOD="GET">
                         <input type="text" name="q" onFocus="if (value == 'Word here..') {value=''}" onBlur="if (value== '') {value='Word here..'}">
                         <input type="submit" value="submit">
                         </FORM>

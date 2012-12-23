@@ -25,10 +25,9 @@ class Search(tornado.web.RequestHandler):
     def initialize(self):
 	self.q = None
 
-    def post(self):
+    def get(self):
 	self.clear()
         self.q = self.get_argument('q')
-	print self.q
 	srch = Searched(options.index,options.__ROOT__,self.q)
 	#srch.indexer()
 	results = srch.searcher()
@@ -43,7 +42,7 @@ class Search(tornado.web.RequestHandler):
 
 class Highlighted(tornado.web.RequestHandler):
 
-    def post(self):
+    def get(self):
 	self.clear()
         self.q = self.get_argument('q')
         srch = Searched(options.index,options.__ROOT__,self.q)
@@ -56,7 +55,7 @@ class AdvSearch(tornado.web.RequestHandler):
 	
 class MoreLikeThis(tornado.web.RequestHandler):
 
-    def post(self):
+    def get(self):
 	docpath = self.get_argument('docpath')
 	srch = Searched(options.index,options.__ROOT__)
 	like_url = srch.morelikethis(docpath)
@@ -64,7 +63,7 @@ class MoreLikeThis(tornado.web.RequestHandler):
 
 class DidYouMean(tornado.web.RequestHandler):
 
-    def post(self):
+    def get(self):
         from whoosh import qparser
         qstring = self.get_argument('qstring')
         print qstring

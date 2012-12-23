@@ -1,4 +1,1 @@
-import searching
-import meta
-
-__all__ = ['searching, meta']
+#fsMgr can be treated as a package for importing searching module

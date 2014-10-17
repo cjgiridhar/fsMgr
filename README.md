@@ -36,7 +36,6 @@ Setup
 - git clone https://github.com/cjgiridhar/fsMgr.git
 - copy the folder [that needs to be indexed/searched] under fsMgr/root
 
-Note: The project assumes your home directory points to /home/ubuntu. Make changes as appropriate to your ENV.
 
 Usage
 =====

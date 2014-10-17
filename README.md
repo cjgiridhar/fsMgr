@@ -33,8 +33,8 @@ Refer the documentation of these classes [here](http://cjgiridhar.github.com/fsM
 Setup
 =====
 
-- Create a directory fsMgr under /home/ubuntu
-- Copy the project contents under fsMgr
+- git clone https://github.com/cjgiridhar/fsMgr.git
+- copy the folder [that needs to be indexed/searched] under fsMgr/root
 
 Note: The project assumes your home directory points to /home/ubuntu. Make changes as appropriate to your ENV.
 
@@ -44,10 +44,10 @@ Usage
 - Run fsMgr as 'python fsMgr.py'
 - Browse to http://localhost:8888/root/ & start searching
 
-Note: in fsMgr.py, the indexer (srch.indexer) is commented.
-Indexing happens on the tree under root/ when you search for a keyword. Time taken for indexing depends on size of root/
-Hence, one needs to uncomment the indexer for preparing the index.
-Once index is ready under index/, uncomment it and start searching at super sonic speed! :)
+Note: Indexing happens on the tree under root/ when you search for a keyword. Time taken for indexing depends on size of root/
+If you want reindexing everytime you search, one needs to uncomment the indexer for preparing the index. fsMgr.py --> srch.indexer, else keep the indexer commented
+
+start searching at super sonic speed! :)
 
 Dependencies
 ============
@@ -55,18 +55,22 @@ Dependencies
 - Tornado 2.2
 - Whoosh 2.4.1
 
+Installing Dependencies
+=======================
+sudo pip install tornado==2.2
+sudo pip install Whoosh==2.4.1
+
 Opportunities
 =============
 
-By adding a class in searching.py, you could leverage more search engines under fsMgr.
-Abstraction to the new search engine can be implemented in fsMgr.py. 
-For instance, pyLucene can be implemenetd in searching.py and exposed to fsMgr.py.
+- By adding a class in searching.py, you could leverage more search engines under fsMgr.
+- Abstraction to the new search engine can be implemented in fsMgr.py. For instance, pyLucene can be implemenetd in searching.py and exposed to fsMgr.py.
 
 
 Known Issues
 ============
-File contents cant be viewed if the file name contains white-spaces
-Robust error handling is not taken care of as its a prototype implementation
+- File contents cant be viewed if the file name contains white-spaces
+- Robust error handling is not taken care of as its a prototype implementation
 
 Contact
 =======
